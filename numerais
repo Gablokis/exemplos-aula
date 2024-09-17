@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto string</title>
+    
+</head>
+<body>
+    <script>
+        let elemento = document.body;    
+        elemento.onkeydown = trataEvento1;
+        elemento.onkeyup = trataEvento1;
+        elemento.onkeypress = trataEvento2;
+        function trataEvento1(event){
+            document.querySelector('#box1').innerHTML = "keyCode<br>"+event.keyCode;
+        }
+        function trataEvento2(event){
+            document.querySelector('#box2').innerHTML = "charCode<br>"+event.charCode;
+        }
+</script>
+<div class="container">
+    <div class="caixa" id="box1">
+    </div>
+    <div class="caixa" id="box2">
+    </div>
+</div>
+    <style>
+        .caixa{
+        width: 300px;
+        height: 300px;
+        font-size: 30pt;
+        border:5px solid black;
+        text-align: center;
+        background-image:linear-gradient(45deg,rgb(28, 235, 35),rgb(10, 231, 238));
+       
+    }
+    .container {
+        display: flex;
+    }
+    </style>
+</body>
+</html>
